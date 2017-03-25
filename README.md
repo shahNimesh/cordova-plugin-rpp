@@ -14,7 +14,7 @@ I think the driver can work for ore models but I can't confirm.
 ## Installing the plugin
 
 ```
-cordova plugin add cordova-plugin-rpp
+cordova plugin add https://github.com/CXRom/cordova-plugin-rpp.git
 ```
 
 ## Quick Example
@@ -89,14 +89,15 @@ Rpp.Print({
 });
 ```
 
-Each line can be configured with this params:
+Each line can be configured with this properties:
 
-|Short|Long      |Type   |Description                        |
-|a    |align     |int    |0=Left (default), 1=Center, 2=Right|
-|b    |bold      |bool   |false (default), true              |
-|u    |underline |bool   |false (default), true              |
-|u    |highlight |bool   |false (default), true              |
-|s    |font size |int    |0-17                               |
+| short | long      | type   | description                         |
+| ----- | --------- | ------ | ----------------------------------- |
+| a    | align      | int    | 0=Left (default), 1=Center, 2=Right |
+| b    | bold       | bool   | false (default), true               |
+| u    | underline  | bool   | false (default), true               |
+| u    | highlight  | bool   | false (default), true               |
+| s    | font size  | int    | 0-17                                |
 
 ### PrintAndClose(data, success, fail)
 
