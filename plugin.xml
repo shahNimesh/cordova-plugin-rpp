@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="cordova-plugin-rpp"
+           version="0.0.1">
+     <name>Rpp Cordava Plugin</name>
+
+     <engines>
+       <engine name="cordova" version=">=3.4.0"/>
+     </engines>
+
+     <js-module src="www/rpp.js" name="Rpp">
+       <clobbers target="window.Rpp" />
+     </js-module>
+   <platform name="android">
+
+       <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="Rpp">
+             <param name="android-package" value="com.arpon.cordova.plugin.driver.printer.Rpp"/>
+          </feature>
+       </config-file>
+
+      <source-file src="src/android/com/arpon/cordova/plugin/driver/printer/Rpp.java" target-dir="src/com/arpon/cordova/plugin/driver/printer"/>
+      <lib-file src="src/android/RT_Android_Bluetooth.jar" target-dir="libs" />
+
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+      </config-file>
+  </platform>
+</plugin>
